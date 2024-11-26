@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import Head from "next/head";
-
 import Filter from "../components/Filter";
 import Invoice from "../components/Invoice";
 import Navbar from "../components/Navbar";
+import router from "next/router";
 
 function Home() {
   const [selectedFilter, setSelectedFilter] = useState("All");
@@ -32,7 +32,7 @@ function Home() {
               selectedFilter={selectedFilter}
               setSelectedFilter={setSelectedFilter}
             />
-            <button className="bg-purple hover:bg-purple-hover rounded-full h-12 p-2 pr-4 flex items-center gap-2">
+            <button onClick={() => router.push("/create")} className="bg-purple hover:bg-purple-hover rounded-full h-12 p-2 pr-4 flex items-center gap-2">
               <div className="bg-white rounded-full text-purple w-8 h-8 flex items-center justify-center font-bold">
                 +
               </div>

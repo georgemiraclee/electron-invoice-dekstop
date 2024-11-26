@@ -31,8 +31,7 @@ export default function Invoice() {
           className="-rotate-90"
           src={IconChevronDown}
           height={15}
-          width={15}
-        />
+          width={15} alt={""}        />
       </div>
     </Link>
   );
